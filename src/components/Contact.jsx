@@ -60,12 +60,36 @@ function Contact() {
     // Dynamic import of EmailJS browser client
     try {
       const emailjs = await import('@emailjs/browser')
-      await emailjs.sendForm(serviceId, templateId, form, publicKey)
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          first_name: firstName,
+          last_name: lastName,
+          name: `${firstName} ${lastName}`.trim(),
+          from_name: `${firstName} ${lastName}`.trim(),
+          user_email: email,
+          from_email: email,
+          reply_to: email,
+          email: email,
+          message: message,
+        },
+        publicKey
+      )
       setStatus('success')
       form.reset()
       setTimeout(() => setStatus('idle'), 4000)
     } catch (err) {
       console.error('EmailJS send error:', err)
+      // Fallback to mailto so the user's message is not lost
+      const subject = `Portfolio Contact from ${firstName} ${lastName}`.trim()
+      const body = `From: ${firstName} ${lastName}\nEmail: ${email}\n\n${message}`
+      window.open(
+        `mailto:${personalInfo.emails.primary}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`,
+        '_blank'
+      )
       setStatus('error')
       setTimeout(() => setStatus('idle'), 4000)
     }
