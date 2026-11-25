@@ -148,10 +148,10 @@ function Hero() {
           {/* Heading */}
           <h1
             data-aos="fade-up"
-            className="text-white text-3xl md:text-5xl font-bold leading-tight"
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight"
           >
             {heroContent.greeting}, <br />
-            <span className="text-black inline-block mt-1">
+            <span className="text-white font-extrabold inline-block mt-1 drop-shadow-sm">
               {heroContent.titleHighlight}
             </span>
           </h1>
@@ -160,7 +160,7 @@ function Hero() {
           <p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-white text-sm md:text-lg font-semibold max-w-md mt-4"
+            className="text-white/90 text-sm md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mt-4"
           >
             {heroContent.subtitle}
           </p>
@@ -169,12 +169,12 @@ function Hero() {
           <div
             data-aos="fade-up"
             data-aos-delay="400"
-            className="flex flex-wrap gap-4 mt-8 items-center"
+            className="flex flex-wrap gap-3 sm:gap-4 mt-8 items-center"
           >
             {/* Primary Action Button */}
             <a
               href={heroContent.ctaPrimary.href}
-              className="px-6 py-3 rounded-full bg-white text-black font-bold text-sm md:text-base hover:scale-105 transition-all shadow-lg inline-block"
+              className="px-6 py-3.5 rounded-full bg-white text-black font-bold text-sm md:text-base hover:scale-105 transition-all shadow-lg inline-flex items-center justify-center"
             >
               {heroContent.ctaPrimary.text}
             </a>
@@ -182,7 +182,7 @@ function Hero() {
             {/* Secondary Action Button */}
             <a
               href={heroContent.ctaSecondary.href}
-              className="px-6 py-3 rounded-full bg-black/40 text-white border border-white/60 backdrop-blur-md font-bold text-sm md:text-base hover:bg-black/60 transition-all inline-block"
+              className="px-6 py-3.5 rounded-full bg-black/40 text-white border border-white/60 backdrop-blur-md font-bold text-sm md:text-base hover:bg-black/60 hover:scale-105 transition-all inline-flex items-center justify-center"
             >
               {heroContent.ctaSecondary.text}
             </a>
@@ -192,7 +192,7 @@ function Hero() {
               <a
                 href={heroContent.ctaResume.href}
                 download
-                className="px-6 py-3 rounded-full bg-transparent border border-white/50 text-white hover:bg-white/10 font-bold text-sm md:text-base transition-all inline-flex items-center space-x-2"
+                className="px-6 py-3.5 rounded-full bg-transparent border border-white/50 text-white hover:bg-white/10 hover:scale-105 font-bold text-sm md:text-base transition-all inline-flex items-center justify-center space-x-2"
               >
                 <svg
                   className="w-4 h-4 fill-none stroke-current"

@@ -75,7 +75,7 @@ function Contact() {
     <section
       ref={ref}
       id="contact"
-      className="bg-[#0a0a0a] w-full min-h-screen relative overflow-hidden flex items-end pt-32 pb-20 md:pb-28 border-t border-gray-900"
+      className="bg-[#0a0a0a] w-full min-h-screen relative overflow-hidden flex flex-col justify-center py-24 md:py-32 border-t border-gray-900"
     >
       {/* Background Giant Parallax Word: "Contact" */}
       <motion.div
@@ -90,12 +90,12 @@ function Contact() {
         </div>
       </motion.div>
 
-      {/* Main Container aligned with the rest of the site (max-w-7xl) */}
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex justify-end">
+      {/* Main Container centered and aligned with the site */}
+      <div className="w-full max-w-5xl mx-auto px-6 md:px-12 relative z-10">
         {/* Red Contact Card */}
         <div
           data-aos="fade-up"
-          className="bg-[#ff2a2a] w-full lg:w-[85%] p-8 sm:p-12 md:p-16 rounded-3xl shadow-2xl relative"
+          className="bg-[#ff2a2a] w-full p-8 sm:p-12 md:p-16 rounded-3xl shadow-2xl relative"
         >
           {/* Header Row */}
           <div className="flex justify-between items-center mb-10 pb-4 border-b border-white/20">
@@ -131,7 +131,7 @@ function Contact() {
                     type="text"
                     required
                     placeholder="First Name *"
-                    className="bg-transparent border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
+                    className="w-full bg-transparent border-0 border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -140,7 +140,7 @@ function Contact() {
                     name="last_name"
                     type="text"
                     placeholder="Last Name"
-                    className="bg-transparent border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
+                    className="w-full bg-transparent border-0 border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -150,30 +150,31 @@ function Contact() {
                     type="email"
                     required
                     placeholder="Email Address *"
-                    className="bg-transparent border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
+                    className="w-full bg-transparent border-0 border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
               </div>
 
-              {/* Right Column: Message */}
+              {/* Right Column: Message Box */}
               <div className="flex flex-col h-full">
                 <textarea
                   id="message"
                   name="message"
                   required
                   placeholder="Your Message *"
-                  className="w-full flex-1 min-h-[180px] md:min-h-full resize-none bg-transparent border-b border-white/40 pb-3 text-lg placeholder-white/80 text-white focus:outline-none focus:border-white transition-colors"
+                  className="w-full flex-1 min-h-[180px] md:min-h-full resize-none bg-white/10 hover:bg-white/15 focus:bg-white/15 border border-white/25 focus:border-white rounded-2xl p-4 text-lg placeholder-white/80 text-white focus:outline-none transition-all"
                 />
               </div>
             </div>
 
-            {/* Bottom Row: Checkbox, Notes, and Submit Button */}
-            <div className="flex flex-col space-y-5 pt-4 border-t border-white/10">
+            {/* Bottom Section: Checkbox, Notes, and Submit Button */}
+            <div className="flex flex-col space-y-6 pt-6 border-t border-white/15">
+              {/* Consent Checkbox */}
               <label className="flex items-center space-x-3 text-white/90 text-sm cursor-pointer select-none">
                 <input
                   type="checkbox"
                   required
-                  className="w-4 h-4 rounded accent-black cursor-pointer"
+                  className="w-4 h-4 rounded accent-black cursor-pointer shrink-0"
                 />
                 <span>
                   I agree that my submitted information will be used to respond
@@ -181,88 +182,91 @@ function Contact() {
                 </span>
               </label>
 
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-white/80">
-                <p>
-                  Your message will be sent directly to my inbox. I typically
-                  respond within 24-48 hours.
-                </p>
-                <p className="shrink-0">
-                  For urgent inquiries:{' '}
-                  <a
-                    href={`mailto:${personalInfo.emails.primary}`}
-                    className="underline font-bold hover:text-black transition-colors"
-                  >
-                    {personalInfo.emails.primary}
-                  </a>
-                </p>
-              </div>
-
-              {/* Submit Button State Variations */}
-              <div className="pt-2">
-                {status === 'sending' && (
-                  <button
-                    type="button"
-                    disabled
-                    className="px-8 py-4 rounded-full bg-black/40 text-white/60 border border-white/20 font-bold text-base cursor-not-allowed inline-flex items-center space-x-3"
-                  >
-                    <svg
-                      className="animate-spin h-5 w-5 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
+              {/* Info Note on Left & Submit Button on Right */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pt-2">
+                <div className="flex flex-col space-y-1.5 text-xs text-white/80">
+                  <p>
+                    Your message will be sent directly to my inbox. I typically
+                    respond within 24-48 hours.
+                  </p>
+                  <p>
+                    For urgent inquiries:{' '}
+                    <a
+                      href={`mailto:${personalInfo.emails.primary}`}
+                      className="underline font-bold hover:text-black transition-colors"
                     >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8v8H4z"
-                      />
-                    </svg>
-                    <span>Sending...</span>
-                  </button>
-                )}
+                      {personalInfo.emails.primary}
+                    </a>
+                  </p>
+                </div>
 
-                {status === 'success' && (
-                  <div className="px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base border border-green-500 inline-flex items-center space-x-2 shadow-lg">
-                    <span>Sent Successfully ✓</span>
-                  </div>
-                )}
-
-                {status === 'error' && (
-                  <button
-                    type="submit"
-                    className="px-8 py-4 rounded-full bg-red-950 text-white font-bold text-base border border-red-700 hover:bg-red-900 inline-flex items-center space-x-2 transition-colors cursor-pointer"
-                  >
-                    <span>Failed — Try Again</span>
-                  </button>
-                )}
-
-                {status === 'idle' && (
-                  <button
-                    type="submit"
-                    className="px-8 py-4 rounded-full border border-white bg-transparent text-white font-bold text-base hover:bg-white hover:text-[#ff2a2a] transition-all duration-300 inline-flex items-center space-x-3 group cursor-pointer shadow-lg"
-                  >
-                    <span>Send Message</span>
-                    <svg
-                      className="w-5 h-5 stroke-current transition-transform duration-300 group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="2.5"
+                {/* Submit Button */}
+                <div className="shrink-0">
+                  {status === 'sending' && (
+                    <button
+                      type="button"
+                      disabled
+                      className="px-8 py-4 rounded-full bg-black/40 text-white/60 border border-white/20 font-bold text-base cursor-not-allowed inline-flex items-center space-x-3"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                      />
-                    </svg>
-                  </button>
-                )}
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v8H4z"
+                        />
+                      </svg>
+                      <span>Sending...</span>
+                    </button>
+                  )}
+
+                  {status === 'success' && (
+                    <div className="px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base border border-green-500 inline-flex items-center space-x-2 shadow-lg">
+                      <span>Sent Successfully ✓</span>
+                    </div>
+                  )}
+
+                  {status === 'error' && (
+                    <button
+                      type="submit"
+                      className="px-8 py-4 rounded-full bg-red-950 text-white font-bold text-base border border-red-700 hover:bg-red-900 inline-flex items-center space-x-2 transition-colors cursor-pointer"
+                    >
+                      <span>Failed — Try Again</span>
+                    </button>
+                  )}
+
+                  {status === 'idle' && (
+                    <button
+                      type="submit"
+                      className="px-8 py-4 rounded-full border border-white bg-transparent text-white font-bold text-base hover:bg-white hover:text-[#ff2a2a] transition-all duration-300 inline-flex items-center space-x-3 group cursor-pointer shadow-lg"
+                    >
+                      <span>Send Message</span>
+                      <svg
+                        className="w-5 h-5 stroke-current transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2.5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </form>
