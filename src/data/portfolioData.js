@@ -157,7 +157,7 @@ export const projects = [
     title: "Smart Placement Management System",
     description: "A role-based placement management platform for students, TPOs, and administrators with automated eligibility tracking, JWT security, and email notifications.",
     techTags: ["Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "JWT", "REST APIs", "Swagger"],
-    links: { github: "https://github.com/sunilaimlrymec-code", demo: "" },
+    links: { github: "https://github.com/sunilaimlrymec-code/smart_placement_mangement", demo: "" },
     isFlagship: true,
   },
   {
@@ -167,7 +167,7 @@ export const projects = [
     title: "Hospital Appointment & Telemedicine System",
     description: "A secure healthcare application for managing doctor appointments and telemedicine consultations with role-based authentication and JPA persistence.",
     techTags: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "Hibernate", "PostgreSQL"],
-    links: { github: "https://github.com/sunilaimlrymec-code", demo: "" },
+    links: { github: "https://github.com/sunilaimlrymec-code/Online-Hospital-Appointment-Doctor-Consultation-System", demo: "" },
     isFlagship: false,
   },
 ];
