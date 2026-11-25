@@ -101,9 +101,9 @@ function Hero() {
       </aside>
 
       {/* Main Content Container */}
-      <div className="absolute inset-0 z-20 w-full h-full px-6 sm:px-10 md:px-14 lg:pl-24 lg:pr-14 pb-14 sm:pb-16 md:pb-20 lg:pb-24 flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end pointer-events-none">
+      <div className="absolute inset-0 z-20 max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-[8%] flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end">
         {/* Left Block: Greetings, Title, Bio & Action Buttons */}
-        <div className="max-w-xl lg:max-w-2xl pointer-events-auto">
+        <div className="max-w-2xl">
           {/* Small Screen Inline Socials */}
           <div
             data-aos="fade-up"
@@ -148,16 +148,10 @@ function Hero() {
           {/* Heading */}
           <h1
             data-aos="fade-up"
-            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black leading-[1.1] tracking-tight"
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight"
           >
             {heroContent.greeting}, <br />
-            <span
-              className="inline-block mt-1 tracking-tight select-none"
-              style={{
-                WebkitTextStroke: '1.5px #000000',
-                color: 'transparent',
-              }}
-            >
+            <span className="text-white font-extrabold inline-block mt-1 drop-shadow-sm">
               {heroContent.titleHighlight}
             </span>
           </h1>
@@ -166,7 +160,7 @@ function Hero() {
           <p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-white font-medium text-xs sm:text-sm md:text-base leading-relaxed max-w-lg mt-4 mb-8"
+            className="text-white/90 text-sm md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mt-4"
           >
             {heroContent.subtitle}
           </p>
@@ -175,12 +169,12 @@ function Hero() {
           <div
             data-aos="fade-up"
             data-aos-delay="400"
-            className="flex flex-wrap gap-3 sm:gap-4 items-center"
+            className="flex flex-wrap gap-3 sm:gap-4 mt-8 items-center"
           >
             {/* Primary Action Button */}
             <a
               href={heroContent.ctaPrimary.href}
-              className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-full bg-white text-black font-bold text-xs sm:text-sm md:text-base hover:scale-105 transition-all shadow-md inline-flex items-center justify-center"
+              className="px-6 py-3.5 rounded-full bg-white text-black font-bold text-sm md:text-base hover:scale-105 transition-all shadow-lg inline-flex items-center justify-center"
             >
               {heroContent.ctaPrimary.text}
             </a>
@@ -188,7 +182,7 @@ function Hero() {
             {/* Secondary Action Button */}
             <a
               href={heroContent.ctaSecondary.href}
-              className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-full bg-black/40 text-white border border-white/60 backdrop-blur-md font-bold text-xs sm:text-sm md:text-base hover:bg-black/60 hover:scale-105 transition-all inline-flex items-center justify-center"
+              className="px-6 py-3.5 rounded-full bg-black/40 text-white border border-white/60 backdrop-blur-md font-bold text-sm md:text-base hover:bg-black/60 hover:scale-105 transition-all inline-flex items-center justify-center"
             >
               {heroContent.ctaSecondary.text}
             </a>
@@ -198,7 +192,7 @@ function Hero() {
               <a
                 href={heroContent.ctaResume.href}
                 download
-                className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-white/20 border border-white/40 text-white backdrop-blur-md hover:bg-white/30 hover:scale-105 font-bold text-xs sm:text-sm md:text-base transition-all inline-flex items-center justify-center space-x-2"
+                className="px-6 py-3.5 rounded-full bg-transparent border border-white/50 text-white hover:bg-white/10 hover:scale-105 font-bold text-sm md:text-base transition-all inline-flex items-center justify-center space-x-2"
               >
                 <svg
                   className="w-4 h-4 fill-none stroke-current"
@@ -221,7 +215,7 @@ function Hero() {
         <div
           data-aos="zoom-in"
           data-aos-delay="600"
-          className="mt-8 md:mt-0 flex flex-col items-center pointer-events-auto"
+          className="mt-8 md:mt-0 flex flex-col items-center"
         >
           <button
             type="button"
