@@ -77,7 +77,7 @@ function About() {
                   {/* Portrait photo */}
                   <img
                     src={stackImage}
-                    alt="H Sunil Kumar — Java Full Stack Development, TAP Academy student"
+                    alt="H Sunil Kumar — Java Full-Stack Developer"
                     className="w-full flex-1 rounded-xl object-cover object-top shadow-inner"
                   />
                 </div>

@@ -2,7 +2,7 @@
 
 Personal developer portfolio showcasing full-stack web applications, technical skills, and software projects.
 
-Live site: https://YOUR-SITE-URL/
+Live site: https://myportfolio-alpha-mauve-95.vercel.app/
 
 Built during the placement training program at [JSpiders](https://qspiders.com/branches/btm-jspiders?branchId=8-branchId) (full-stack development, AI and augmented reality training).
 
