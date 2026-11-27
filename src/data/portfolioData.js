@@ -125,10 +125,34 @@ export const technicalSkills = {
 
 export const leadershipList = [
   {
-    title: "Open-Source Contributor",
-    description: "Contributed pull requests to open-source Java projects on GitHub, collaborating with maintainers on documentation, CLI tools, and workflows.",
+    title: "Selenium Boot",
+    repo: "seleniumboot/selenium-boot",
+    prUrl: "https://github.com/seleniumboot/selenium-boot/pull/200",
+    prNumber: "#200",
     role: "Open-Source Contributor",
-    badge: "Open Source",
+    badge: "Pull Request #200",
+    description: "Contributed enhancements to the Selenium Boot open-source framework, supporting Spring Boot test automation workflows and component integration.",
+    tech: ["Java", "Spring Boot", "Selenium", "Test Automation"],
+  },
+  {
+    title: "JVM MCP Server",
+    repo: "oscarbol09/jvm-mcp",
+    prUrl: "https://github.com/oscarbol09/jvm-mcp/pull/99",
+    prNumber: "#99",
+    role: "Open-Source Contributor",
+    badge: "Pull Request #99",
+    description: "Contributed to the Model Context Protocol (MCP) server for Java Virtual Machine diagnostics, developer inspection tools, and runtime instrumentation.",
+    tech: ["Java", "JVM", "Model Context Protocol", "Developer Tooling"],
+  },
+  {
+    title: "Systivex",
+    repo: "soubhagya-behera/systivex",
+    prUrl: "https://github.com/soubhagya-behera/systivex/pull/7",
+    prNumber: "#7",
+    role: "Open-Source Contributor",
+    badge: "Pull Request #7",
+    description: "Contributed pull request improvements, developer tooling enhancements, and configuration workflows to the Systivex repository.",
+    tech: ["Open Source", "System Utilities", "Developer Tooling", "Git"],
   },
 ];
 

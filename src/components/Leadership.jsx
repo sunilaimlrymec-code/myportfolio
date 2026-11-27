@@ -36,9 +36,40 @@ function LeadershipItem({ item, index }) {
         </p>
 
         {/* Description */}
-        <p className="text-white/60 text-sm leading-relaxed">
+        <p className="text-white/60 text-sm leading-relaxed mb-4">
           {item.description}
         </p>
+
+        {/* Tech tags */}
+        {item.tech && item.tech.length > 0 && (
+          <div className={`flex flex-wrap gap-1.5 mb-4 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+            {item.tech.map((t) => (
+              <span
+                key={t}
+                className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-white/50 text-[11px] font-mono"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* View Pull Request Link */}
+        {item.prUrl && (
+          <div className={`pt-3 border-t border-white/10 flex items-center ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+            <a
+              href={item.prUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-red-500/10 hover:bg-[#ff2a2a] text-red-400 hover:text-white border border-red-500/30 text-xs font-mono font-bold transition-all duration-200 group/btn"
+            >
+              <span>View Pull Request {item.prNumber || ''}</span>
+              <svg className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Empty Spacer on the other side for balance on md+ screens */}
