@@ -190,6 +190,52 @@ export const education = {
   tenth: "Sri Vasavi Vidyalaya (91.63%)",
 };
 
+export const educationList = [
+  {
+    level: "Undergraduate Degree",
+    degree: "B.E. in Artificial Intelligence & Machine Learning / Computer Science",
+    institution: "Rao Bahadur Y Mahabaleshwarappa Engineering College (RYMEC)",
+    location: "Bellary, Karnataka",
+    duration: "2022 — 2026",
+    score: "81% Aggregate",
+    icon: "🎓",
+    badge: "B.E. Degree",
+    highlights: [
+      "Specializing in Java Full-Stack architecture, Spring Boot, REST APIs, and Relational Databases.",
+      "Comprehensive coursework in Data Structures & Algorithms, Object-Oriented Programming, and Database Systems.",
+      "Built production-ready projects including Smart Placement Management and Hospital Consultation systems.",
+    ],
+  },
+  {
+    level: "Pre-University (12th / PUC)",
+    degree: "Pre-University Course (Science — PCMB)",
+    institution: "Pupil Tree PU College",
+    location: "Bellary, Karnataka",
+    duration: "2020 — 2022",
+    score: "71.3%",
+    icon: "🏛️",
+    badge: "Class XII",
+    highlights: [
+      "Rigorous science curriculum with core focus on Mathematics, Physics, Chemistry, and Biology.",
+      "Developed foundational analytical logic, quantitative problem-solving, and algorithmic thinking.",
+    ],
+  },
+  {
+    level: "Secondary School (10th / SSLC)",
+    degree: "Secondary School Leaving Certificate (SSLC)",
+    institution: "Sri Vasavi Vidyalaya",
+    location: "Bellary, Karnataka",
+    duration: "Graduated: 2020",
+    score: "91.63% (Distinction)",
+    icon: "🏫",
+    badge: "Class X",
+    highlights: [
+      "Graduated with Distinction honors (91.63%).",
+      "Active participant in state-level science symposiums, mathematics competitions, and academic leadership.",
+    ],
+  },
+];
+
 export const footerContent = {
   taglines: ["Java Full-Stack Developer", "Spring Boot · REST APIs · React", "Building Resilient Software"],
   credential: "B.E. Computer Science & Engineering",

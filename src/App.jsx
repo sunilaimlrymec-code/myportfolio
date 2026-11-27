@@ -8,10 +8,11 @@ import Services from './components/Services'
 import Projects from './components/Projects'
 import Internships from './components/Internships'
 import Leadership from './components/Leadership'
+import Education from './components/Education'
 import SoftSkills from './components/SoftSkills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { internshipsList, leadershipList } from './data/portfolioData'
+import { internshipsList, leadershipList, educationList } from './data/portfolioData'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Projects />
       {internshipsList && internshipsList.length > 0 && <Internships />}
       {leadershipList && leadershipList.length > 0 && <Leadership />}
+      {educationList && educationList.length > 0 && <Education />}
       <SoftSkills />
       <Contact />
       <Footer />
